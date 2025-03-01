@@ -69,6 +69,10 @@ input[type="submit"] {
   height: 2.8125rem;
 }
 
+input[type="submit"] {
+  margin-bottom: 0.625rem;
+}
+
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="submit"]:focus {
@@ -169,15 +173,15 @@ input[type="submit"]:focus {
   outline: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 47.9375rem) {
   #ipSecurity {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .login-wrapper {
-    max-width: 31.25rem;
+    max-width: 28.75rem;
     margin: 0 auto;
   }
 
