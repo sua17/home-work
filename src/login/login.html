@@ -1,0 +1,109 @@
+<!-- HTML 마크업을 작성해 주세요 -->
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naver login</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link rel="stylesheet" href="/src/login/styles/login.css" />
+  </head>
+  <body>
+    <header>
+      <!-- 네이버 로고 -->
+      <img
+        src="./img/logo.svg"
+        alt="네이버 로고"
+        width="230"
+        height="44"
+        viewBox="0 0 230 44"
+      />
+    </header>
+    <div class="login-wrapper">
+      <form action="/" class="loginform">
+        <div class="form-group">
+          <!-- 아이디 -->
+          <label for="userID"></label>
+          <input
+            type="email"
+            id="userID"
+            name="userID"
+            placeholder="아이디(이메일)"
+            required
+          />
+          <span class="error-message" id="idError"
+            >아이디는 이메일 형식으로 입력해 주세요.</span
+          >
+        </div>
+        <div class="form-group">
+          <!-- 비밀번호 -->
+          <label for="userPWD"></label>
+          <input
+            type="password"
+            id="userPWD"
+            name="userPWD"
+            placeholder="비밀번호"
+            required
+          />
+          <span class="error-message" id="pwdError"
+            >비밀번호는 10자리 이상 입력해 주세요.</span
+          >
+          <span class="erroer-messange-ten" id="idError"
+            >이 입력란을 작성하세요.</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="login"></label>
+          <input type="submit" id="login" name="login" value="로그인" />
+        </div>
+        <div class="ip-wrap">
+          <div class="form-group">
+            <!-- 로그인 상태 유지 -->
+            <input
+              type="checkbox"
+              id="keepLogin"
+              name="keepLogin"
+              style="display: none"
+            />
+            <label for="keepLogin">
+              <img
+                src="./img/unchecked.svg"
+                alt="상태 이미지"
+                class="status-icon"
+              />
+              로그인 상태유지
+            </label>
+          </div>
+          <div class="form-group">
+            <!-- IP 보안 -->
+            <a
+              href="./pages/ip_security.html"
+              target="_blank"
+              class="ip-security-link"
+              >IP 보안</a
+            >
+            <div class="ip-status-wrap">
+              <input type="checkbox" id="ipSecurity" name="ipSecurity" />
+              <label for="ipSecurity" class="ip-security-label"></label>
+              <span class="ip-status"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
