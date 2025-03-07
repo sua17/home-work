@@ -10,3 +10,6 @@
 - [3주차 회고](./src/avatars/avatars.md)
 - [login](./src/login/login.html)
 - [4주차 회고](./src/login/login.md)
+- [card](./src/apple/card-component.html)
+- [apple](./src/apple/apple.html)
+- [5주차 회고](./src/apple/apple.md)
