@@ -1,0 +1,179 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./base.css";
+
+.contents {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .apple-item.ipad-pro,
+    .apple-item.ipad-air,
+    .apple-item.iphone-15-pro {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.apple-item {
+  width: 100%;
+  height: var(--size);
+  block-size: var(--size);
+  /* padding: 2rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1rem; */
+}
+
+/* small과 large media */
+.apple-item.ipad-pro {
+  background: url(../products/ipad_pro.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background: url(../products/ipad_pro_wide_2x.jpeg) no-repeat center/cover;
+  }
+}
+
+.apple-item.ipad-air {
+  background: url(../products/ipad_air.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background: url(../products/ipad_air_wide_2x.jpeg) no-repeat center/cover;
+  }
+}
+
+.apple-item.iphone-15-pro {
+  background: url(../products/iphone15_pro.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background: url(../products/iphone15_pro_wide.jpeg) no-repeat center/cover;
+  }
+}
+
+.apple-item.iphone15 {
+  background: url(../products/iphone15.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background: url(../products/iphone15_2x.jpeg) no-repeat center/cover;
+  }
+}
+
+.apple-item.watch {
+  background: url(../products/apple_watch.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background: url(../products/apple_watch_2x.jpeg) no-repeat center/cover;
+  }
+}
+
+.apple-item.mac-air {
+  background: url(../products/macbook_air.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background: url(../products/macbook_air_2x.jpeg) no-repeat center/cover;
+  }
+}
+
+.apple-item.airpods {
+  background: url(../products/airpods_pro.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background: url(../products/airpods_pro_2x.jpeg) no-repeat center/cover;
+  }
+}
+
+.headline {
+  color: var(--white);
+}
+
+.item-text {
+  text-align: center;
+
+  .item-text p:not(.title) {
+    margin-bottom: var(--x-small-spacing);
+  }
+
+  @media (min-width: 1024px) {
+    .item-text p:not(.title) {
+      margin-bottom: var(--small-spacing);
+    }
+  }
+
+  .title {
+    font-size: var(--large-text);
+    margin-top: var(--large-spacing);
+    margin-bottom: var(--small-spacing);
+
+    @media (min-width: 1024px) {
+      font-size: var(--extra-large-text);
+      margin-top: var(--extra-large-spacing);
+    }
+  }
+
+  .subtitle {
+    line-height: var(--line-normal);
+    font-size: var(--base-text);
+
+    @media (min-width) {
+      font-size: var(---medium-text);
+    }
+  }
+
+  .subtitle2 {
+    font-size: var(--base-text);
+
+    @media (min-width) {
+      font-size: var(---medium-tex);
+    }
+  }
+
+  .text {
+    font-size: var(--small-text);
+  }
+  .text.gray {
+    color: var(--gray);
+  }
+}
+
+/* 버튼 더 알아보기와 가격 보기  */
+
+.item-buttons {
+  margin-top: calc(var(--small-spacing) - var(--x-small-spacing));
+
+  .button {
+    display: inline-flex;
+    padding: var(--x-small-spacing);
+    font-size: var(--xx-small-text);
+    border-radius: 1rem;
+    margin-right: var(--base-spacing);
+
+    @media (min-width: 1024px) {
+      font-size: var(--x-small-text);
+    }
+  }
+
+  .bt-fill {
+    background: var(--black);
+    color: #fff;
+  }
+
+  .bt-outline {
+    background: transparent;
+    color: var(--black);
+    border: 1px solid var(--black);
+  }
+}
+
+.bt-fill.dark {
+  color: #fff;
+  background: var(--blue-200);
+}
+
+.bt-outline.white {
+  color: var(--blue-200);
+  border-color: var(--blue-200);
+}
